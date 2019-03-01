@@ -32,6 +32,13 @@ def self.create_table
     self
   end
 
+  def self.create(name:, breed:)
+    dog = Dog.new(name, breed)
+    dog.save
+    dog
+  end
+
+
 
 
 
