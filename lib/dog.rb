@@ -18,14 +18,10 @@ def self.create_table
   end
 
   def self.drop_table
-      sql =  <<-SQL
-        DROP TABLE IF NOT EXISTS dogs (
-          id INTEGER PRIMARY KEY,
-          name TEXT
-          )
-          SQL
-      DB[:conn].execute(sql)
-    end
+    sql = "DROP TABLE IF EXISTS dogs"
+
+    DB[:conn].execute(sql)
+  end
 
 
 end
