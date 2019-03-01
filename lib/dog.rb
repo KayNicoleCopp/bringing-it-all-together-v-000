@@ -32,8 +32,8 @@ def self.create_table
     self
   end
 
-  def self.create(name:, breed:)
-    dog = Dog.new(name, breed)
+  def self.create(id:, name:, breed:)
+    dog = Dog.new(id, name, breed)
     dog.save
     dog
   end
