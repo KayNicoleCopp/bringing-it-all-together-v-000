@@ -32,8 +32,8 @@ def self.create_table
     self
   end
 
-  def self.create(hash_of_dog_attributes)
-    dog = Dog.new(hash_of_dog_attributes)
+  def self.create(hash_of_attributes)
+    dog = Dog.new(hash_of_attributes)
     dog.save
     dog
   end
