@@ -19,7 +19,6 @@ def self.create_table
 
   def self.drop_table
     sql = "DROP TABLE IF EXISTS dogs"
-
     DB[:conn].execute(sql)
   end
 
@@ -28,9 +27,7 @@ def self.create_table
       INSERT INTO dogs (name, breed)
       VALUES (?, ?)
     SQL
- 
     DB[:conn].execute(sql, self.name, self.breed)
- 
   end
 
 
